@@ -1,3 +1,4 @@
+# удалось склонировать на бабочий
 from mywindow import Window
 
 if __name__ == "__main__":
