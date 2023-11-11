@@ -7,7 +7,6 @@ class Window(Tk, Singleton):
     def init(self):
         print("calling from init")
         super().__init__()
-
         self.button = Button(self, text='open eqs window', command=self.create_window_eqs)
         self.button.pack(expand=True)
 
