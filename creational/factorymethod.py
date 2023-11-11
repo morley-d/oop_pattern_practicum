@@ -21,3 +21,13 @@ class SynphPlugin(Plugin):
 
     def type(self):
         return self.type
+
+
+class Creator:
+    @staticmethod
+    def Factory(type):
+        if type == "Effect":
+            return EffectPlugin()
+        elif type == "Synph":
+            return SynphPlugin()
+        return None
