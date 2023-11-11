@@ -19,7 +19,7 @@ class Window(Tk, Singleton):
 
     def create_footer_eqs(self):
         global extraWindow
-        extraWindow = footerwindows.Extra()
+        extraWindow = footerwindow.Extra()
 
     def __init__(self):
         print("calling from __init__")
