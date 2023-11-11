@@ -14,3 +14,4 @@ class Extra(Toplevel):
 
 def show_plugins(self):
     drop = self.entry.get()
+    effect = Creator().Factory(drop)
