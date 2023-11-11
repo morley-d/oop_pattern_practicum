@@ -11,9 +11,9 @@ class Window(Tk, Singleton):
         self.button = Button(self, text='open eqs window', command=self.create_window_eqs)
         self.button.pack(expand=True)
 
-    def create_windows_eqs(self):
+    def create_window_eqs(self):
         global extraWindow
         extraWindow = eqswindows.Extra()
 
-    # def __init__(self):
-        # print("calling from __init__")
+    def __init__(self):
+        print("calling from __init__")

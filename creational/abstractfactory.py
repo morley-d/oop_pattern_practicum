@@ -1,6 +1,6 @@
 class EqFactory:
     def __init__(self):
-        self._eqsfactory = [FabFilter(5, "Pro Q"), UAD(4, "UAD"), Waves(3, "Waves")]
+        self._eqsfactory = [FabFilter(5, "Pro Q"), UAD(4, "UAD"), Waves(10, "Waves")]
     
     @property
     def eqs(self):
