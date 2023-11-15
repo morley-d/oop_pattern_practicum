@@ -2,6 +2,7 @@ from tkinter import *
 from creational.singleton import Singleton
 import eqswindows
 import footerwindow
+import converterwindow
 
 
 class Window(Tk, Singleton):
@@ -12,6 +13,8 @@ class Window(Tk, Singleton):
         self.button.pack(expand=True)
         self.button = Button(self, text='open footer', command=self.create_footer_eqs)
         self.button.pack(expand=True)
+        self.button = Button(self, text='converter', command=self.create_converter)
+        self.button.pack(expand=True)
 
     def create_window_eqs(self):
         global extraWindow
@@ -20,6 +23,10 @@ class Window(Tk, Singleton):
     def create_footer_eqs(self):
         global extraWindow
         extraWindow = footerwindow.Extra()
+    
+    def create_converter(self):
+        global extraWindow
+        extraWindow = converterwindow.Extra()
 
     def __init__(self):
         print("calling from __init__")

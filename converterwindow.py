@@ -1,17 +1,22 @@
 from tkinter import Toplevel, Button
-from creational.abstractfactory import *
+from structural.adapter import *
 
 class Extra(Toplevel):
     def __init__(self):
         super().__init__()
-        self.title('EQs')
+        self.title('Converter window')
         self.geometry('640x480')
-        self.button = Button(self, text="Show EQs", command=self.show_EQs)
+        self.button = Button(self, text="Audio Record", command=self.audio)
+        self.button.pack(expand=True)
+        self.button = Button(self, text="Midi", command=self.midi)
         self.button.pack(expand=True)
 
-    def show_EQs(self):
-        eqsFactory = EqFactory()
-        eqs = eqsFactory.eqs
-        for e in eqs:
-            self.button = Button(self, text=f'{e.name}')
-            self.button.pack(expand=True)
+
+    def audio(self):
+        track = AudioTrack()
+        track.audioRecord()
+
+    def midi(self):
+        track = AudioToMidiAdapter()
+        track.audioRecord()
+        
