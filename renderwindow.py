@@ -7,7 +7,7 @@ class Extra(Toplevel):
         super().__init__()
         self.title('Rendering')
         self.geometry('200x700')
-        self.button = Button(self, text='Drug plugin here', command=self.show_plugins)
+        self.button = Button(self, text='Drug plugin here', command=self.start_rendering)
         self.button.pack(expand=True)
     
     def start_rendering(self):

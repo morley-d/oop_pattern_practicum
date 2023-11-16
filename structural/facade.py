@@ -3,19 +3,19 @@ from pathlib import Path
 class MP3:
     def process(self):
         print("Processing MP3")
-        Path("filenmae.mp3").touch()
+        Path("filename.mp3").touch()
 
 
 class WAV:
     def process(self):
         print("Processing WAV")
-        Path("filenmae.wav").touch()
+        Path("filename.wav").touch()
 
 
 class Data:
     def process(self):
         print("Processing analisys")
-        Path("filenmae.dbbs").touch()
+        Path("filename.dbbs").touch()
 
 
 class Render:
