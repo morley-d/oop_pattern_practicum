@@ -1,4 +1,5 @@
 from tkinter import *
+from tkinter.messagebox import askquestion
 from structural.facade import *
 
 class Extra(Toplevel):
@@ -11,4 +12,5 @@ class Extra(Toplevel):
     
     def start_rendering(self):
         renderTrack = Render()
+        askquestion("...", message="Startrendering")
         renderTrack.startRendering()
