@@ -1,3 +1,5 @@
+from pathlib import Path
+
 class MP3:
     def process(self):
         print("Processing MP3")
