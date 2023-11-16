@@ -1,0 +1,11 @@
+from tkinter import *
+from tkinter.messagebox import askquestion
+from structural.facade import *
+
+class Extra(Toplevel):
+    def __init__(self):
+        super().__init__()
+        self.title('Rendering')
+        self.geometry('200x700')
+        self.button = Button(self, text='Drug plugin here', command=self.start_rendering)
+        self.button.pack(expand=True)
