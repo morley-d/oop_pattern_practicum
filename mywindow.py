@@ -19,7 +19,7 @@ class Window(Tk, Singleton):
         self.button.pack(expand=True)
         self.button = Button(self, text='decorator', command=self.create_decorator)
         self.button.pack(expand=True)
-        self.button = Button(self, text='decorator', command=self.create_export_window)
+        self.button = Button(self, text='facade', command=self.create_export_window)
         self.button.pack(expand=True)
 
     def create_window_eqs(self):
