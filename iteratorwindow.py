@@ -4,7 +4,7 @@ from behavioral.iterator import *
 class Extra(Toplevel):
     def __init__(self):
         super().__init__()
-        self.title('Iterator')
+        self.title('Search')
         self.geometry('640x480')
         self.samples = Samples(['hat', 'kick', '808'])
         self.entry = Entry(self)
