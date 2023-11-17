@@ -15,25 +15,25 @@ class Compressor(Observable):
     def __init__(self, name):
         super().__init__()
         self.name = name
-        self.gane = 0
+        self._gain = 0
 
     @property
     def gain(self):
-        return self.gain
+        return self._gain
     
     @gain.setter
     def setGain(self, value):
-        self._gane = value
+        self._gain = value
         self.notify()
 
 
 class Kick:
     def __init__(self):
-        self.name = "Kick"
+        self._name = "Kick"
 
     def update(self, subject):
         print(f"Kick: Subject {subject.name} has data: gain {subject.setGain}")
 
-    # @property
-    # def name(self):
-    #     return self.name
+    @property
+    def name(self):
+        return self._name
