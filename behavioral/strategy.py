@@ -32,3 +32,15 @@ class Synth(metaclass=ABCMeta):
     @soundSystem.setter
     def soundSystem(self, soundSystem):
         self._soundSystem = soundSystem
+
+
+class KeyScape(Synth):
+    def __init__(self, cleanSound):
+        self.cleanSound = cleanSound
+        super().__init__(cleanSound)
+
+
+class Mellotron(Synth):
+    def __init__(self, vintageSound):
+        self.vintageSound = vintageSound
+        super().__init__(vintageSound)
