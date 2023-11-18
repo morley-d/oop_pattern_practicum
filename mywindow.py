@@ -7,6 +7,7 @@ import decoratorwindow
 import renderwindow
 import iteratorwindow
 import groupwindow
+import strategywindow
 
 
 class Window(Tk, Singleton):
@@ -26,6 +27,8 @@ class Window(Tk, Singleton):
         self.button = Button(self, text='iterator', command=self.create_iterator_window)
         self.button.pack(expand=True)
         self.button = Button(self, text='observer', command=self.create_group_window)
+        self.button.pack(expand=True)
+        self.button = Button(self, text='strategy', command=self.create_strategy_window)
         self.button.pack(expand=True)
 
     def create_window_eqs(self):
@@ -55,6 +58,10 @@ class Window(Tk, Singleton):
     def create_group_window(self):
         global extraWindow
         extraWindow = groupwindow.Extra()
+
+    def create_strategy_window(self):
+        global extraWindow
+        extraWindow = strategywindow.Extra()
 
     def __init__(self):
         print("calling from __init__")
